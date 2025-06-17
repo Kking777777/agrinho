@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lemon&display=swap');
 
 :root {
     --laranja-claro: #FF862A;
@@ -8,152 +7,59 @@
     --branco: #ffffff;
 }
 
-/* Estilo base */
 body {
-    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--branco);
+    margin: 0;
+    padding: 0;
     transition: background-color 0.4s ease;
 }
 
 header {
-    background-color: var(--branco);
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--laranja-claro);
+    color: white;
 }
 
-/* Seções */
-section {
-    padding-bottom: 5rem;
-}
-
-/* Navegação */
-.nav-link {
-    color: var(--marrom);
-    font-weight: 600;
-}
-
-/* Fundo da seção de boas-vindas */
 .inicio-fundo {
-    background-image: url('img/4965007.jpg');
+    background-image: url('../imagem/hatsune-miku.jpg');
     background-size: cover;
-    background-position: right;
+    background-position: center;
     border-radius: 80px;
-    width: 100%;
+    width: 90%;
     height: 606px;
     padding: 40px;
-    margin: 0 auto;
-}
-
-/* Conteúdo à esquerda na tela inicial */
-.esquerda-conteudo {
+    margin: 2rem auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Botão inicial */
+.esquerda-conteudo {
+    background: rgba(0,0,0,0.4);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+
+.display-4 {
+    font-family: 'Lemon', serif;
+    font-size: 3rem;
+    text-shadow: -3px 3px var(--laranja-claro);
+}
+
 .botao-inicio {
     background-color: var(--laranja-claro);
     border-radius: 30px;
     border: none;
-    width: 14em;
-    height: 3em;
+    padding: 1rem 2rem;
     color: #fff;
-    font-weight: 600;
-}
-
-/* Título com sombra */
-.display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
-}
-
-/* Seção Tropicália */
-#tropicalia {
-    position: relative;
-    padding-top: 5rem;
-    margin: 3rem 0;
-    background: url('img/flor.png') top right no-repeat,
-                url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-}
-
-#tropicalia .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-}
-
-/* Título das seções */
-h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    color: var(--laranja-claro);
-}
-
-/* Galeria */
-#galeria {
-    background-color: #FAF4F4;
-}
-
-.fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
-}
-
-/* Contato */
-#contato {
-    background-image: url('img/4965007.jpg');
-    background-size: cover;
-    padding: 4rem 0;
-}
-
-.formulario {
-    background-color: var(--branco);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Formulário */
-.formulario button {
+.botao-inicio:hover {
     background-color: var(--marrom);
-    border: none;
-    font-weight: bold;
-    color: #fff;
 }
-
-.form-control {
-    background-color: var(--cinza-claro);
-}
-
-/* Botões de acessibilidade */
-#acessibilidade button {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-}
-
-/* Responsivo (opcional básico) */
-@media (max-width: 768px) {
-    .inicio-fundo {
-        flex-direction: column;
-        height: auto;
-        padding: 2rem;
-        text-align: center;
-    }
-
-    .esquerda-conteudo {
-        align-items: center;
-    }
-
-    .nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}body {
-    font-size: 1rem;
-    transition: background-color 0.4s ease;
-}
-
