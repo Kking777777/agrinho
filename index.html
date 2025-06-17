@@ -1,103 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Hatsune Miku</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
-            <div class="container d-flex align-items-center">
-                <div class="col-5">
-                    <h2>O que foi a Tropicália?</h2>
-                    <p class="p-2">Light Novels são várias junções de novels consideradas inacreditáveis.</p>
-                </div>
-            </div>
-        </section>
+    <header>
+        <h1>Bem-vindo ao Site da Miku!</h1>
+    </header>
 
-        <section id="galeria">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
-                             class="img-fluid rounded-5" alt="Jorge Ben e o Trio Mocotó" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg"
-                             class="img-fluid rounded-5" alt="Os Mutantes" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="inicio-fundo">
+        <div class="esquerda-conteudo">
+            <h2 class="display-4">Hatsune Miku</h2>
+            <p>A diva virtual que conquistou o mundo!</p>
+            <button class="botao-inicio">Saiba Mais</button>
+        </div>
+    </section>
 
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario">
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill tamanho-botao">Enviar mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-        // -------- Mudança de cor de fundo --------
-        const botaoMudarCor = document.getElementById('mudar-cor');
-        const cores = ['##008B8B', '#4B0082', '#00FA9A', '#00008B', '#fffde7'];
-        let indice = 0;
-
-        botaoMudarCor.addEventListener('click', () => {
-            indice = (indice + 1) % cores.length;
-            document.body.style.backgroundColor = cores[indice];
-        });
-
-        // -------- Acessibilidade: aumentar/diminuir fonte com localStorage --------
-        let tamanhoFonte = parseFloat(localStorage.getItem('tamanhoFonte')) || 1;
-        const aumentarBtn = document.getElementById('aumentar-fonte');
-        const diminuirBtn = document.getElementById('diminuir-fonte');
-        const body = document.body;
-
-        // Aplica o valor salvo ao carregar
-        body.style.fontSize = `${tamanhoFonte}rem`;
-
-        aumentarBtn.addEventListener('click', () => {
-            if (tamanhoFonte < 1.8) {
-                tamanhoFonte += 0.1;
-                atualizarFonte();
-            }
-        });
-
-        diminuirBtn.addEventListener('click', () => {
-            if (tamanhoFonte > 0.8) {
-                tamanhoFonte -= 0.1;
-                atualizarFonte();
-            }
-        });
-
-        function atualizarFonte() {
-            body.style.fontSize = `${tamanhoFonte.toFixed(2)}rem`;
-            localStorage.setItem('tamanhoFonte', tamanhoFonte.toFixed(2));
-        }
-    </script>
 </body>
-
 </html>
